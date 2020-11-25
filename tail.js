@@ -1,14 +1,24 @@
 const assertEqual = function(actual, expected) {
-  return (actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`));
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  }
 };
 
-const tail = function(array) {
+const tail = function(array){
   let newArray = array.slice(1);
   return newArray;
 };
-  
-const result = tail([1,2,3]);
 
-console.log(result);
+let array = [1,2,3,4,5];
 
+const result = tail(array)
+
+assertEqual(result[0], array[1]);
+
+
+/*
+//Hard-coded version:  
 assertEqual(result[0],2);
+*/
