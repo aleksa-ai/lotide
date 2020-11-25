@@ -8,11 +8,12 @@ const eqArrays = function(arrayOne, arrayTwo) {
     return result;
   }
 
+  //this assertion function will make use of eqArrays function for array comparison.
   const assertArraysEqual = function(actual, expected){
     if (eqArrays(actual, expected) === true) {
       console.log("✅✅✅ Assertion Passed")
    }else{
-     console.log("❌❌❌ Assertion Failed")
+     console.log("🛑🛑🛑 Assertion Failed")
    }
   }
 
