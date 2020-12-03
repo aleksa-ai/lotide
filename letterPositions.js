@@ -12,5 +12,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-let sentenceToCount = "lighthouse in the house";
-console.log(letterPositions(sentenceToCount));
+
+// //console.log(letterPositions("lighthouse in the house"));
+// letterPositions("lighthouse in the house");
+
+module.exports = letterPositions;
